@@ -135,7 +135,7 @@
 				<h1>Projekt 1</h1>
 
 				<p> <script>let name = "Artur";</script>
-					<script defer>name = prompt("Jak masz na imię?", name);</script>
+					<!--script defer>name = prompt("Jak masz na imię?", name);</script-->
 					<script>document.write("<p>Ćw. 1. Witaj, " + name + "</p>");</script></p>
 
 			</div>
@@ -147,9 +147,18 @@
 		<div class="container">
 			<div class="jumbotron">
 				<h1>Projekt 2</h1>
-				
-				<p>Miejsce na projekt laboratoryjny</p>
-				
+					<script>
+						let myArray = ["tablica",
+										123,
+										"javascript",
+										9];
+						myArray[myArray.length-1] = "Nowa wartosc";
+						myArray[4] = "nowy5";
+						myArray[myArray.length] = "nowy6";
+						myArray.push("nowy7", "nowy8", "nowy9", "nowy10");
+						myArray.unshift("nowy11", "nowy12");
+						//alert(myArray[1]);
+					</script>
 			</div>
 		</div>
 	</section>
