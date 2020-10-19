@@ -133,11 +133,44 @@
 		<div class="container">
 			<div class="jumbotron">
 				<h1>Projekt 1</h1>
-
+				<p><b>1. Kontrola ładowania się skryptów: async, defer</b></p>
 				<p> <script>let name = "Artur";</script>
 					<!--script defer>name = prompt("Jak masz na imię?", name);</script-->
-					<script>document.write("<p>Ćw. 1. Witaj, " + name + "</p>");</script></p>
-
+					<script>document.write("<p>Witaj, " + name + "</p>");</script></p>
+				<p>----------------------------------------------------</p>
+				<p><b>2. Tablice - zadanie 1</b></p>
+				<script>
+					let myArray = ["tablica",
+						123,
+						"javascript",
+						9];
+					myArray[myArray.length-1] = "Nowa wartosc";
+					myArray[4] = "nowy5";
+					myArray[myArray.length] = "nowy6";
+					myArray.push("nowy7", "nowy8", "nowy9", "nowy10");
+					myArray.unshift("nowy11", "nowy12");
+					//alert(myArray[1]);
+				</script>
+				<p><script>	document.write(myArray[1]);</script></p>
+				<p><b>2. Tablice - zadanie 2</b></p>
+				<script>
+					let mySecondArray = [12,
+						54,
+						"nazwa",
+						"string"];
+					document.write("<p>Pierwszy element to <strong>");
+					document.write(mySecondArray[0] + "</strong></p>");
+					document.write("<p>Ostatni element to <strong>");
+					document.write(mySecondArray[mySecondArray.length-1] + "</strong></p>");
+					mySecondArray.unshift(99);
+					document.write("<p>Pierwszy po unishift element to <strong>");
+					document.write(mySecondArray[0] + "</strong></p>");
+				</script>
+				<p>----------------------------------------------------</p>
+				<p><b>3. DOM - zadanie 3</b></p>
+				<p id="counter_form">
+				</p>
+				<p id="scripts_number"></p>
 			</div>
 		</div>
 	</section>
@@ -147,31 +180,6 @@
 		<div class="container">
 			<div class="jumbotron">
 				<h1>Projekt 2</h1>
-					<script>
-						let myArray = ["tablica",
-										123,
-										"javascript",
-										9];
-						myArray[myArray.length-1] = "Nowa wartosc";
-						myArray[4] = "nowy5";
-						myArray[myArray.length] = "nowy6";
-						myArray.push("nowy7", "nowy8", "nowy9", "nowy10");
-						myArray.unshift("nowy11", "nowy12");
-						//alert(myArray[1]);
-					</script>
-					<script>
-						let mySecondArray = [12,
-											 54,
-											 "nazwa",
-											 "string"];
-						document.write("<p>Pierwszy element to <strong>");
-						document.write(mySecondArray[0] + "</strong></p>");
-						document.write("<p>Ostatni element to <strong>");
-						document.write(mySecondArray[mySecondArray.length-1] + "</strong></p>");
-						mySecondArray.unshift(99);
-						document.write("<p>Pierwszy po unishift element to <strong>");
-						document.write(mySecondArray[0] + "</strong></p>");
-					</script>
 			</div>
 		</div>
 	</section>
@@ -179,9 +187,6 @@
 		<div class="container">
 			<div class="jumbotron">
 				<h1>Projekt 3</h1>
-				<p id="counter_form">
-
-				</p>
 
 			</div>
 		</div>
@@ -325,7 +330,9 @@
 	<script src="js/forms.js"></script>
 	<script>
 		let counter = document.forms.length;
-		document.getElementById("counter_form").innerHTML = counter;
+		document.getElementById("counter_form").innerHTML = "Liczba formularzy: " + counter;
+		let counter2 = document.scripts.length;
+		document.getElementById("scripts_number").innerHTML = "Liczba skryptów: " + counter2;
 	</script>
 	
 </body>
