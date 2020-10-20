@@ -333,8 +333,19 @@
 		document.getElementById("counter_form").innerHTML = "Liczba formularzy: " + counter;
 		let counter2 = document.scripts.length;
 		document.getElementById("scripts_number").innerHTML = "Liczba skryptów: " + counter2;
+		let newPara = document.createElement("p");
+		let newPara2 = document.createElement("p");
+		document.getElementById("main-page").appendChild(newPara);
+		document.getElementById("main-page").appendChild(newPara2);
+
 	</script>
-	
+	<p><script>
+		let newText = document.createTextNode("Artur Jechna");
+		let newText2 = document.createTextNode("Indeks: 18944");
+		newPara.appendChild(newText);
+		newPara2.appendChild(newText2);
+	</script></p>
+
 </body>
 
 </html>
