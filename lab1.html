@@ -54,7 +54,7 @@
 					</a></li>
 					<li><a href="lab1.html">Projekt 1</a></li>
 					<li><a href="lab2.html">Projekt 2</a></li>
-					<li><a href="lab3.html">Projekt 3</a></li>
+					<li><a href="lab3.html">Projekt 2</a></li>
 					<li><a href="#form" data-toggle="modal"
 						data-target="#ModalForm">Kontakt</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -129,6 +129,92 @@
 		</div>
 	</section>
 	<!-- /container -->
+
+	<section id="projekt1">
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Projekt 1</h1>
+				<p><b>1. Kontrola ładowania się skryptów: async, defer</b></p>
+				<p> <script>let name = "Artur";</script>
+					<!--script defer>name = prompt("Jak masz na imię?", name);</script-->
+					<script>document.write("<p>Witaj, " + name + "</p>");</script></p>
+				<p>----------------------------------------------------</p>
+				<p><b>2. Tablice - zadanie 1</b></p>
+				<script id="array">
+					let myArray = ["tablica",
+						123,
+						"javascript",
+						9];
+					myArray[myArray.length-1] = "Nowa wartosc";
+					myArray[4] = "nowy5";
+					myArray[myArray.length] = "nowy6";
+					myArray.push("nowy7", "nowy8", "nowy9", "nowy10");
+					myArray.unshift("nowy11", "nowy12");
+					//alert(myArray[0]);
+				</script>
+				<p><script>	document.write(myArray[1]);</script></p>
+				<p><b>2. Tablice - zadanie 2</b></p>
+				<script>
+					let mySecondArray = [12,
+						54,
+						"nazwa",
+						"string"];
+					document.write("<p>Pierwszy element to <strong>");
+					document.write(mySecondArray[0] + "</strong></p>");
+					document.write("<p>Ostatni element to <strong>");
+					document.write(mySecondArray[mySecondArray.length-1] + "</strong></p>");
+					mySecondArray.unshift(99);
+					document.write("<p>Pierwszy po unishift element to <strong>");
+					document.write(mySecondArray[0] + "</strong></p>");
+				</script>
+				<p>----------------------------------------------------</p>
+				<p><b>3. DOM - zadanie 3</b></p>
+				<p id="counter_form"></p>
+				<p id="scripts_number"></p>
+
+				<!-- Zadanie 4 -->
+				<script>
+					let ele = myArray[0];
+					let ele2 = myArray[5];
+					//let newText = document.createTextNode("Artur Jechna");
+					let newText = document.createTextNode(ele);
+					//let newText2 = document.createTextNode("Indeks: 18944");
+					let newText2 = document.createTextNode(ele2);
+					newPara.appendChild(newText);
+					newPara2.appendChild(newText2);
+				</script>
+				<script>
+					//wypisanie połowy tablicy while
+					i=0;
+					n = mySecondArray -1 ;
+					document.write("</br> <p>Drukowanie przy pomocy pętli while: </p>");
+					while( i < n/2 ) {
+						i++;
+						document.write(mySecondArray[i]+", ");
+					}
+				</script>
+
+			</div>
+		</div>
+	</section>
+
+
+	<section id="projekt2">
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Projekt 2</h1>
+			</div>
+		</div>
+	</section>
+	<section id="projekt3">
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Projekt 3</h1>
+
+			</div>
+		</div>
+	</section>
+
 
 
 	<footer>
@@ -265,6 +351,15 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/ie10-viewport-bug-workaround.js"></script>
 	<script src="js/forms.js"></script>
-
+	<script>
+		let counter = document.forms.length;
+		document.getElementById("counter_form").innerHTML = "Liczba formularzy: " + counter;
+		let counter2 = document.scripts.length;
+		document.getElementById("scripts_number").innerHTML = "Liczba skryptów: " + counter2;
+		let newPara = document.createElement("p");
+		let newPara2 = document.createElement("p");
+		document.getElementById("main-page").appendChild(newPara);
+		document.getElementById("main-page").appendChild(newPara2);
+	</script>
 </body>
 </html>
