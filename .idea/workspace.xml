@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a038768e-1a11-41f6-a134-6204eb09204b" name="Default Changelist" comment="">
+    <list default="true" id="a038768e-1a11-41f6-a134-6204eb09204b" name="Default Changelist" comment="quiz attempt1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab2.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab2.html" afterDir="false" />
     </list>
@@ -60,12 +60,16 @@
       <workItem from="1605084516790" duration="5950000" />
       <workItem from="1605091053144" duration="3678000" />
       <workItem from="1605104105867" duration="2835000" />
-      <workItem from="1605282287926" duration="1082000" />
+      <workItem from="1605282287926" duration="3829000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="quiz attempt1" />
+    <option name="LAST_COMMIT_MESSAGE" value="quiz attempt1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603122174498">

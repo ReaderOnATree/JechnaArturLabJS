@@ -145,25 +145,60 @@
 
 				<p>--------------------------------------------------------</p>
 
-				<p id="array">
+
+
 				<script>
-					let score = 0;
 					let q = 0;
 
 					let questions = [
-							["Co oznacza skrót JS?", "Java Script"],
-							["Kto napisał sagę o Wiedźminie?", "Andrzej Sapkowski"],
-							["Czy padnie dzisiaj rekord?", "Tak"]
+							["Co oznacza skrót JS?", "java script"],
+							["Kto napisał sagę o Wiedźminie?", "andrzej sapkowski"],
+							["Czy padnie dzisiaj rekord?", "tak"]
 					];
 
-					document.write("Twoje obecne punkty: " + score);
 
 
-				</script></p>
+					let testQuestion2 = () => {
+						let answer1 = document.getElementById("question1").value;
+						let answer2 = document.getElementById("question2").value;
+						let answer3 = document.getElementById("question3").value;
+
+						answer1 = answer1.toLowerCase();
+						answer2 = answer2.toLowerCase();
+						answer3 = answer3.toLowerCase();
+
+						let scoreNumber = 0;
 
 
-				<!--label for="question"><script>document.write(questions[0][0])</script></label>
-				<input type="text" id="question" name="question"><br><br-->
+						if (answer1 === questions[0][1]) {
+							scoreNumber++;
+						}
+						if (answer2 === questions[1][1]) {
+							scoreNumber++;
+						}
+						if (answer3 === questions[2][1]) {
+							scoreNumber++;
+						}
+
+						alert("Twoje obecne punkty: " + scoreNumber);
+
+					}
+
+
+				</script>
+
+				<label for="question1"><script>document.write(questions[0][0])</script></label>
+				<input type="text" id="question1" name="question"><br><br>
+				<label for="question2"><script>document.write(questions[1][0])</script></label>
+				<input type="text" id="question2" name="question"><br><br>
+				<label for="question3"><script>document.write(questions[2][0])</script></label>
+				<input type="text" id="question3" name="question"><br><br>
+
+				<button type="submit" onClick="testQuestion2()">Sprawdź</button>
+
+
+
+
 
 				<!--script>
 					let testQuestion = () => {
@@ -232,7 +267,7 @@
 			<input type="radio" name="q2" value="c">J.R.R. Tolkien</br>
 			<br><br>
 			Q3.Najpopularniejszy system operacyjny?<br>
-			<input type="radio" name="q3" value="a">Macintosh</br>
+			<input type="radio" name="q3" value="a">Mac OS</br>
 			<input type="radio" name="q3" value="b">Linux</br>
 			<input type="radio" name="q3" value="c">Windows</br>
 			<br><br>
@@ -243,7 +278,7 @@
 		<script>
 
 
-			function testQuestion () {
+			let testQuestion = () => {
 				let q1 = document.formularz.q1.value;
 				let q2 = document.formularz.q2.value;
 				let q3 = document.formularz.q3.value;
