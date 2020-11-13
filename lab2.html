@@ -185,6 +185,33 @@
 					}
 
 
+
+					let nextQuestion = () => {
+
+						if (q != questions.length - 1) {
+							q++;
+							testQuestion2();
+							setQuestion();
+						}
+					}
+
+					let setQuestion = () => {
+						let question1 = document.getElementById("question1").value;
+						let question2 = document.getElementById("question2").value;
+						let question3 = document.getElementById("question3").value;
+
+						if (q == 1){
+							return question1;
+						}
+						if (q == 2) {
+							return question2;
+						}
+						if (q == 3) {
+							return question3;
+						}
+					}
+
+
 				</script>
 
 				<label for="question1"><script>document.write(questions[0][0])</script></label>
