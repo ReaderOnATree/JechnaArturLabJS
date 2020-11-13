@@ -23,6 +23,11 @@
 <script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
 <script src="js/jquery.easing.1.3.min.js"></script>
 <script src="js/jquery.easing.compatibility.js"></script>
+	<style>
+		.formularzClass {
+			text-align: center;
+		}
+	</style>
 
 
 </head>
@@ -137,6 +142,9 @@
 		<div class="container">
 			<div class="jumbotron">
 				<h1>Projekt 2</h1>
+
+				<p>--------------------------------------------------------</p>
+
 				<p id="array">
 				<script>
 					let score = 0;
@@ -147,27 +155,116 @@
 							["Kto napisał sagę o Wiedźminie?", "Andrzej Sapkowski"],
 							["Czy padnie dzisiaj rekord?", "Tak"]
 					];
+
+					document.write("Twoje obecne punkty: " + score);
+
+
 				</script></p>
-				<script>
-					function testQuestion () {
-						for (let i = 0; i<=questions.length; i++) {
-							document.write(questions[i]);
+
+
+				<!--label for="question"><script>document.write(questions[0][0])</script></label>
+				<input type="text" id="question" name="question"><br><br-->
+
+				<!--script>
+					let testQuestion = () => {
+						let answer1;
+						let answer2;
+						let answer3;
+
+						if (answer1 == questions[0][1]) {
+							score++;
+						}
+						if (answer2 == questions[1][1]) {
+							score++;
+						}
+						if (answer3 == questions[2][1]) {
+							score++;
 						}
 					}
-					document.getElementById("array").innerHTML = questions[1][0];
-					document.getElementById("array").innerHTML = questions[2][0];
-					document.getElementById("array").innerHTML = questions[3][0];
+				</script-->
 
-				</script>
+				<!--script>
+					let testQuestion = () => {
+						let answer = document.getElementById('answer').value;
+						if (answer == questions[q][1]) {
+							score++;
+						}
+					}
 
+					let nextQuestion = () => {
+						if (q != questions.length-1) {
+							testQuestion();
+							q++
+							setQuestion();
+						}
+					}
 
-				<button onclick="testQuestion()">Następne pytanie</button>
+					let setQuestion = () => {
+						document.getElementById("q").innerHTML = questions[q][0];
+					}
+				</script-->
+
+				<!--label for="question"><script>document.write(setQuestion())</script></label>
+            	<input type="text" id="question" name="question"><br><br>
+
+				<button onclick="nextQuestion()">Następne pytanie</button-->
+
+				<!--button id="start-btn" class="start-btn btn">Start</button>
+				<button id="next-btn" class="next-btn btn">Następne</button-->
 
 
 
 			</div>
 		</div>
 	</section>
+
+		<div class="formularzClass">
+
+			<form name="formularz">
+			Q1.Co oznacza skrót JS?<br>
+			<input type="radio" name="q1" value="a">JSON</br>
+			<input type="radio" name="q1" value="b">Java Script</br>
+			<input type="radio" name="q1" value="c">Johnny Silverheand</br>
+			<br><br>
+			Q2.Kto napisał sagę o Wiedźminie?<br>
+			<input type="radio" name="q2" value="a">Andrzej Sapkowski</br>
+			<input type="radio" name="q2" value="b">George R.R. Martin</br>
+			<input type="radio" name="q2" value="c">J.R.R. Tolkien</br>
+			<br><br>
+			Q3.Najpopularniejszy system operacyjny?<br>
+			<input type="radio" name="q3" value="a">Macintosh</br>
+			<input type="radio" name="q3" value="b">Linux</br>
+			<input type="radio" name="q3" value="c">Windows</br>
+			<br><br>
+
+			<input type="button" value="submit" onclick="testQuestion()">
+		</form>
+
+		<script>
+
+
+			function testQuestion () {
+				let q1 = document.formularz.q1.value;
+				let q2 = document.formularz.q2.value;
+				let q3 = document.formularz.q3.value;
+
+				let scoreNum = 0;
+
+				if(q1 == "b") {
+					scoreNum++;
+				}
+				if(q2 == "a") {
+					scoreNum++;
+				}
+				if(q3 == "c") {
+					scoreNum++;
+				}
+
+				alert("Congrats! Your score is: " + scoreNum );
+			}
+
+		</script>
+	</div>
 
 
 

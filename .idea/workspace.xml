@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a038768e-1a11-41f6-a134-6204eb09204b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab1.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lab2.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3.html" beforeDir="false" afterPath="$PROJECT_DIR$/lab3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +56,11 @@
       <workItem from="1603386362349" duration="600000" />
       <workItem from="1603472266791" duration="1275000" />
       <workItem from="1603708089438" duration="59000" />
-      <workItem from="1604733309357" duration="6553000" />
+      <workItem from="1604733309357" duration="6557000" />
+      <workItem from="1605084516790" duration="5950000" />
+      <workItem from="1605091053144" duration="3678000" />
+      <workItem from="1605104105867" duration="2835000" />
+      <workItem from="1605282287926" duration="1082000" />
     </task>
     <servers />
   </component>
@@ -70,9 +72,13 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1603122174498" />
-    <state x="342" y="208" key="new project wizard" timestamp="1603708144239">
+    <state x="342" y="208" key="new project wizard" timestamp="1605090783530">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="342" y="208" key="new project wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1603708144239" />
+    <state x="342" y="208" key="new project wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1605090783530" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1605093291115">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1605093291115" />
   </component>
 </project>
