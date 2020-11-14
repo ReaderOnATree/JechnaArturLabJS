@@ -24,6 +24,25 @@
 <script src="js/jquery.easing.1.3.min.js"></script>
 <script src="js/jquery.easing.compatibility.js"></script>
 
+	<style>
+		.pq {
+			text-align: justify;
+			text-justify: inter-word;
+		}
+
+		.pullquote {
+			float: right;
+			clear: right;
+			width: 200px;
+			padding: 10px;
+			font-size: 20px;
+			background-color: rgba(255, 211, 224, 0.5);
+			border-radius: 10px;
+			margin: 20px 0 10px 10px;
+			font-style: italic;
+		}
+	</style>
+
 
 </head>
 
@@ -135,12 +154,65 @@
 			<div class="jumbotron">
 				<h1>Projekt 3</h1>
 
+				<p class="pq">Otóż tego dnia o godzinie 18:00 czasu polskiego swoją premierę będzie miał piąty już
+					odcinek z cyklu Night City Wire, w ramach którego prezentowane są różne aspekty tego nadchodzącego RPG-a.
+					Kolejny epizod skupi się na Johnnym Silverhandzie, czyli liderze rockowej grupy Samurai w uniwersum Cyberpunka,
+					w którego w grze wciela się Keanu Reeves, a także różnych obliczach <span class="pq" style="color:yellowgreen">Night City</span>, które przyjdzie nam poznać w trakcie zabawy.</p>
+
+				<p class="pq">Wyróżniająca się konstrukcja stworzona z myślą o grach podkreśla bardziej wyrazisty wygląd i <span class="pq" style="color:darkred">gamingowe funkcje</span>,
+					które zapewniają graczom zarówno praktyczne, jak i estetyczne korzyści. Otwory wentylacyjne z tyłu monitora
+					zostały zaprojektowane z myślą o rozproszeniu ciepła.</p>
+
+				<p class="pq">MasterLiquid ML360 Sub-Zero AIO korzysta z technologii <span class="pq" style="color:darkblue">Intel Cryo Cooling.</span>
+					Dzięki temu ma być w stanie schłodzić nawet najmocniejsze procesory. Także takie, które są przetaktowane.
+					Zastosowano tu jednostkę termoelektryczną TEC.</p>
+
+
+				<script>
+					$(document).ready(function(){
+						$('span.pq').each(function() {
+							let quote = $(this).clone();
+							quote.removeClass('pq');
+							quote.addClass('pullquote');
+							$(this).before(quote);
+						}); // koniec funkcji each
+					}); // koniec funkcji ready
+				</script>
+
+				<p>-------------------------------------------------------------------------------------------------------------------------------</p>
+				<script>
+					$(document).ready(function(){
+						$('#projekt3').dblclick(function(){
+							alert("Uwaga!");
+						});
+					});
+
+					$('*').dblclick(showAlert);
+
+					$(document).ready(function(){
+						$()
+					});
+
+					let message = "<p>Wskazałeś odnośnik myszą!</p>"
+					let overHover = () => {
+						$('.jumbotron').append(message);
+					}
+					$('a').mouseover(overHover);
+
+				</script>
+
+				<a href="#">1. odnośnik</a>
+				<a href="#">2. odnośnik</a>
+				<a href="#">3. odnośnik</a>
+
 
 
 
 			</div>
 		</div>
 	</section>
+
+
 
 
 
