@@ -24,6 +24,11 @@
 <script src="js/jquery.easing.1.3.min.js"></script>
 <script src="js/jquery.easing.compatibility.js"></script>
 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+
 	<style>
 		.pq {
 			text-align: justify;
@@ -40,6 +45,19 @@
 			border-radius: 10px;
 			margin: 20px 0 10px 10px;
 			font-style: italic;
+		}
+
+		.pullquote2 {
+			float: right;
+			clear: right;
+			width: 200px;
+			padding: 10px;
+			font-size: 15px;
+			background-color: #23527c;
+			border-radius: 10px;
+			margin: 20px 0 10px 10px;
+			font-family: 'Nerko One', cursive;
+			color: #985f0d;
 		}
 	</style>
 
@@ -152,62 +170,99 @@
 	<section id="projekt3">
 		<div class="container">
 			<div class="jumbotron">
-				<h1>Projekt 3</h1>
+				<div class="jumbo">
+					<h1 id="hh">Projekt 3</h1>
 
-				<p class="pq">Otóż tego dnia o godzinie 18:00 czasu polskiego swoją premierę będzie miał piąty już
-					odcinek z cyklu Night City Wire, w ramach którego prezentowane są różne aspekty tego nadchodzącego RPG-a.
-					Kolejny epizod skupi się na Johnnym Silverhandzie, czyli liderze rockowej grupy Samurai w uniwersum Cyberpunka,
-					w którego w grze wciela się Keanu Reeves, a także różnych obliczach <span class="pq" style="color:yellowgreen">Night City</span>, które przyjdzie nam poznać w trakcie zabawy.</p>
+					<p class="pq">Otóż tego dnia o godzinie 18:00 czasu polskiego swoją premierę będzie miał piąty już
+						odcinek z cyklu Night City Wire, w ramach którego prezentowane są różne aspekty tego nadchodzącego RPG-a.
+						Kolejny epizod skupi się na <span id="joh">Johnnym Silverhandzie</span>, czyli liderze rockowej grupy Samurai w uniwersum Cyberpunka,
+						w którego w grze wciela się Keanu Reeves, a także różnych obliczach <span class="pq" style="color:yellowgreen">Night City</span>,
+						które przyjdzie nam poznać w trakcie zabawy.</p>
 
-				<p class="pq">Wyróżniająca się konstrukcja stworzona z myślą o grach podkreśla bardziej wyrazisty wygląd i <span class="pq" style="color:darkred">gamingowe funkcje</span>,
-					które zapewniają graczom zarówno praktyczne, jak i estetyczne korzyści. Otwory wentylacyjne z tyłu monitora
-					zostały zaprojektowane z myślą o rozproszeniu ciepła.</p>
+					<p class="pq">Wyróżniająca się konstrukcja stworzona z myślą o grach podkreśla bardziej wyrazisty wygląd i
+						<span id="thisSpan"  class="pq" style="color:darkred">gamingowe funkcje</span>,
+						które zapewniają graczom zarówno praktyczne, jak i estetyczne korzyści. Otwory wentylacyjne z tyłu monitora
+						zostały zaprojektowane z myślą o rozproszeniu ciepła.</p>
 
-				<p class="pq">MasterLiquid ML360 Sub-Zero AIO korzysta z technologii <span class="pq" style="color:darkblue">Intel Cryo Cooling.</span>
-					Dzięki temu ma być w stanie schłodzić nawet najmocniejsze procesory. Także takie, które są przetaktowane.
-					Zastosowano tu jednostkę termoelektryczną TEC.</p>
+					<p class="pq">MasterLiquid ML360 Sub-Zero AIO korzysta z technologii <span class="pq" style="color:darkblue">Intel Cryo Cooling.</span>
+						Dzięki temu ma być w stanie schłodzić nawet najmocniejsze procesory. Także takie, które są przetaktowane.
+						Zastosowano tu jednostkę termoelektryczną TEC.</p>
 
+					<a class="aa" href="#">1. odnośnik</a>
+					<a class="aa" href="#">2. odnośnik</a>
+					<a class="aa" href="#">3. odnośnik</a>
 
-				<script>
-					$(document).ready(function(){
-						$('span.pq').each(function() {
-							let quote = $(this).clone();
-							quote.removeClass('pq');
-							quote.addClass('pullquote');
-							$(this).before(quote);
-						}); // koniec funkcji each
-					}); // koniec funkcji ready
-				</script>
+					<hr><hr>
 
-				<p>-------------------------------------------------------------------------------------------------------------------------------</p>
-				<script>
-					$(document).ready(function(){
-						$('#projekt3').dblclick(function(){
-							alert("Uwaga!");
-						});
-					});
-
-					$('*').dblclick(showAlert);
-
-					$(document).ready(function(){
-						$()
-					});
-
-					let message = "<p>Wskazałeś odnośnik myszą!</p>"
-					let overHover = () => {
-						$('.jumbotron').append(message);
-					}
-					$('a').mouseover(overHover);
-
-				</script>
-
-				<a href="#">1. odnośnik</a>
-				<a href="#">2. odnośnik</a>
-				<a href="#">3. odnośnik</a>
+					<form>
+						<input id="button" type="button" value="Kliknij mnie!">
+						<hr><hr>
+						<input id="button1" type="button" value="Pierwszy">
+						<input id="button2" type="button" value="Drugi">
+						<input id="button3" type="button" value="Trzeci">
+						<input id="button4" type="button" value="Czwarty">
+						<input id="button5" type="button" value="Piąty">
+					</form>
 
 
+					<script>
+						$(document).ready(function(){
+							$('span.pq').each(function() {
+								let quote = $(this).clone();
+								quote.removeClass('pq');
+								quote.addClass('pullquote');
+								$(this).before(quote);
+							}); // koniec funkcji each
 
+							$('#projekt3').dblclick(function(){
+								alert("Uwaga!");
+							}); // koniec dbclick
 
+							$('.aa').mouseover(function(){
+								let message = "<p>Wskazałeś odnośnik myszą!</p>"
+								$('.jumbo').append(message);
+							}); // koniec mouseover
+
+							$('#button').click(function(){
+								$(this).val("Zostałem kliknięty");
+							}); // koniec funkcji click
+
+							$('#button1').click(function(){
+								$('#joh').css({'color': 'red', 'font-style': 'italic', 'font-size': '25px'});
+								let info = "<p>Po naciśnięciu przycisku 'Pierwszy' zmieniony został napis Johnny Silverhand, dodany kolor czcionki czerwony" +
+										", czcionka na itallic, powiększona do 25px.</p>"
+								$('.jumbo').append(info);
+								$(this).val("1 kliknięty");
+							});
+
+							$('#button2').click(function(){
+								$('#hh').css({'color': 'blue', 'font-family': 'Didact Gothic', 'font-size': '40px'});
+								let info = "<p>Po naciśnięciu przycisku 'Drugi' zmieniony został nagłówek, dodany kolor czcionki niebieski" +
+										", czcionka na Didact Gothic, zmniejszona do 40px.</p>"
+								$('.jumbo').append(info);
+								$(this).val("2 kliknięty");
+							});
+
+							$('#button3').click(function(){
+								$('#thisSpan').removeClass('pullquote');
+								$('#thisSpan').addClass('pullquote2');
+								let info = "<p>Po naciśnięciu przycisku 'Trzeci' zmieniony został jeden z cytatów, dodany kolor czcionki żółto-pomarańczowy" +
+										", czcionka na Nerko One, rozmiar na 20px.</p>"
+								$('.jumbo').append(info);
+								$(this).val("3 kliknięty");
+							});
+
+							$('#button4').click(function(){
+
+								let info = "<p>Po naciśnięciu przycisku 'Trzeci' zmieniony został jeden z cytatów, dodany kolor czcionki żółto-pomarańczowy" +
+										", czcionka na Nerko One, rozmiar na 20px.</p>"
+								$('.jumbo').append(info);
+								$(this).val("4 kliknięty");
+							});
+
+						}); // koniec funkcji ready
+					</script>
+				</div>
 			</div>
 		</div>
 	</section>
